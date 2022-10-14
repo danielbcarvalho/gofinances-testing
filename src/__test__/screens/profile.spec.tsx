@@ -8,7 +8,7 @@ describe('Profile', () => {
 
     const inputName = getByPlaceholderText('Sabor');
 
-    expect(inputName).toBeTruthy();
+    expect(inputName.props.placeholder).toBeTruthy();
     // Modo tradicional.
     //expect(inputName.props.placeholder).toBeTruthy();
   });
@@ -28,6 +28,7 @@ describe('Profile', () => {
 
     const title = getByTestId('text-title');
 
+    console.log("🚀 ~ file: profile.spec.tsx ~ line 32 ~ it ~ title.props", title.props)
     expect(title.props.children).toContain('Sorvete');
   });
 });
